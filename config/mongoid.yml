@@ -1,0 +1,13 @@
+production:
+  clients:
+    default:
+      uri: <%= ENV['MONGODB_URI'] %>
+      options:
+        consistency: :strong
+        max_retries: 30
+        retry_interval: 1
+        timeout: 15
+        skip_version_check: true
+        safe: true
+  options:
+    raise_not_found_error: false
